@@ -1,0 +1,17 @@
+%h1 Edit Existing Task
+
+= form_tag task_template_path(@task_template), :method => :put do
+
+  = label :task_template, :task_type, 'Task Type'
+  = text_field :task_template, 'task_type'
+
+  = label :task_template, :duration, 'Duration'
+  = text_field :task_template,  'duration'
+
+  = label :task_template, :goal, 'Goal'
+  = text_field :task_template, 'goal'
+  
+  = label :task_template, :points, 'Points'
+  = text_field :task_template, 'points'
+
+  = submit_tag 'Update Task Info'

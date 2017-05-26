@@ -1,0 +1,13 @@
+%div{:class => 'container'}
+  = form_tag volunteers_path, :id => "signup", :method => :create, :class => 'form-signin' do
+    = submit_tag 'Sign in/Sign up', :id => "signup", :class => 'btn btn-large btn-block'
+    
+= flash[:notice] unless flash[:notice].blank? 
+%div{:class => 'container'}
+  = form_tag directors_path, :method => :post, :class => 'form-signin' do
+    %h2{:class => "form-signin-heading"} Director Sign In
+    = label :director, :name, 'Name'
+    = text_field :director, 'name', :class => 'form-control', :type => 'name', :placeholder => 'Name'
+    = label :director, :email, 'Email', :class => 'sr-only'
+    = text_field :director,  'email', :class => 'form-control', :type => 'email', :placeholder => 'Email'
+    = submit_tag 'Login as Director', :id => "signin", :class => 'btn btn-large btn-block'

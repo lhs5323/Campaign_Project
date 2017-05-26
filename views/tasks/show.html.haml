@@ -1,0 +1,31 @@
+%label Task progress for #{@task.task_type} for Goal: #{@task.goal}
+%label= flash[:notice] unless flash[:notice].blank?
+%table#task.table.table-striped
+  %thead
+    %tr
+      %th ID
+      %th Type
+      %th Duration
+      %th= "Progress (number of #{@task.units})"
+      %th Goal
+      %th Points
+  %tbody
+    %tr
+      %td= @task.id
+      %td= @task.task_type
+      %td= @task.duration
+      %td= @task.progress
+      %td= @task.goal.to_s + " " + @task.units.to_s
+      %td= @task.points
+= form_tag volunteer_task_path(@task.volunteer_id, @task.id), :method => :put do
+
+  = label :daily_progress, 'Daily Progress'
+  = text_field :daily_progress, 'daily_progress'
+
+  = submit_tag 'Update Progress', :id => 'updates_progress' 
+
+= link_to "Go Home", volunteer_tasks_path(@task.volunteer_id), :id => 'go_home'
+
+
+
+        

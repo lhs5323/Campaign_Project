@@ -1,0 +1,20 @@
+%h1 Create New Task
+
+= form_tag task_templates_path do
+
+  = label :task_template, :task_type, 'Task Type'
+  = text_field :task_template, 'task_type'
+
+  = label :task_template, :duration, 'Duration in Days'
+  = select :task_template, :duration, ['1','2','3','4','5', '6', '7']
+
+  = label :task_template, :points, 'Points'
+  = select :task_template, :points, ['5','10','15','20','25']
+  
+  = label :task_template, :goal, 'Goal'
+  = text_field :task_template, 'goal'
+  
+  = label :task_template, :units, 'Units'
+  = text_field :task_template, 'units'
+  
+  = submit_tag 'Save Task'

@@ -1,0 +1,20 @@
+%h1 Create New Task
+
+= form_tag task_templates_path do
+
+  = label :task_template, :task_type, 'Task type'
+  = text_field :task_template, 'task type'
+
+  = label :task_template, :duration, 'Duration'
+  = text_field :task_template, 'duration'
+
+  = label :task_template, :goal, 'Goal'
+  = text_field :task_template, 'goal'
+  
+  = label :task_template, :points, 'Points'
+  = text_field :task_template, 'points'
+  
+  = label :task_template, :progress, 'Progress'
+  = text_field :task_template, 'progress'
+
+  = submit_tag 'Save Changes'

@@ -1,0 +1,16 @@
+%table#volunteer.table
+  %thead
+    %tr
+      %th Name
+      %th Twitter_Key
+      %th User_ID
+      %th Total_point
+  %tbody
+    -@volunteer.each do |volunteer|
+      %tr
+        %td= volunteer.name
+        %td= volunteer.twitter_key
+        %td= volunteer.user_ID
+        %td= volunteer.total_points
+  
+= link_to 'Back to the Tasks list', directors_path        

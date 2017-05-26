@@ -1,0 +1,17 @@
+%table#volunteer
+  %thead
+    %tr
+      %th name
+      %th twitter_key
+      %th user_ID
+      %th total_point
+%tbody
+  -@volunteers.each do |volunteer|
+    %tr
+      %td= @volunteer.name
+      %td= @volunteer.twitter_key
+      %td= @volunteer.user_ID
+      %td= @volunteer.total_point
+      
+= link_to "Go Home", volunteer_tasks_path(@task.volunteer_id)
+        

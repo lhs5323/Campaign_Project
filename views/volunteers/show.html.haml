@@ -1,0 +1,15 @@
+%label Current User Account 
+%table#volunteer
+  %thead
+    %tr
+      %th Name
+      %th Twitter_key
+      %th Total_points
+      %th User_ID
+  %tbody
+    %tr
+      %td= @volunteer.name
+      %td= @volunteer.twitter_key
+      %td= @volunteer.total_points
+      %td= @volunteer.user_ID
+      %td= link_to 'Edit', edit_volunteer_path(@volunteer)

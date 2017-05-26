@@ -1,0 +1,22 @@
+%table#task_template
+https://final-project-team1-cirly.c9users.io:8081/
+  %thead
+    %tr
+      %th ID
+      %th Type
+      %th Duration
+      %th Progress
+      %th Goal
+      %th Points
+  %tbody
+    -@task_templates.each do |task_template|
+      %tr
+        %td= task_template.id
+        %td= task_template.task_type
+        %td= task_template.duration
+        %td= task_template.progress
+        %td= task_template.goal
+        %td= task_template.points
+        //%td= link_to "Accept", volunteer_tasks_path(@volunteer_id, task_id: task[:id]), :id => "accept_" + task.task_ID.to_s, method: :post
+        //%td= link_to "Decline", volunteer_tasks_path(@volunteer_id), :id => "decline_" + task.task_ID.to_s
+       

@@ -1,0 +1,30 @@
+%h1 Welcome Director!
+= flash[:notice] unless flash[:notice].blank?
+%table#task_templates.table.table-striped
+  %thead
+    %tr
+      %th Type
+      %th
+      %th Goal
+      %th (In Units)
+      %th Duration
+      %th Points
+  %tbody
+    -@task_templates.each do |task_template|
+      %tr
+        %td= task_template.task_type 
+        %td
+        %td= task_template.goal
+        %td= task_template.units
+        %td= task_template.duration
+        %td= task_template.points
+        %td= link_to 'View', director_path(task_template)
+  
+
+= link_to 'Add a new task           ', new_director_path
+
+= link_to 'View all volunteers', volunteers_path
+
+
+
+

@@ -1,0 +1,20 @@
+%h2 Details about #{@Task_template.task_type}
+
+%ul#details
+  %li
+    Type:
+    = @Task_template.task_type
+  %li
+    Duration:
+    = @Task_template.duration
+  %li
+    Goal:
+    = @Task_template.goal
+    = @Task_template.units
+  %li
+    Points:
+    = @Task_template.points
+  
+= link_to 'Edit', edit_director_path(@Task_template)
+= button_to 'Delete', director_path(@Task_template), :method => :delete, :confirm => 'Are you sure?'
+= link_to 'Back to Tasks list', directors_path

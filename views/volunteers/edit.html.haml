@@ -1,0 +1,20 @@
+-# edit.html.haml using partial
+
+%h1 Edit Existing Volunteer
+
+= form_tag volunteer_path(@volunteer), :method => :put do
+
+  = label :volunteer, :name, 'Name'
+  = text_field :volunteer, 'Name'
+
+  = label :volunteer, :twitter_key, 'Twitter_key'
+  = text_field :volunteer, :twitter_key
+  
+  = label :volunteer, :user_ID, 'User_id'
+  = text_field :volunteer, :user_ID
+  
+  = label :volunteer, :total_points, 'Total_Points'
+  = text_field :volunteer, :total_points
+  
+
+  = submit_tag 'Update Points Info'

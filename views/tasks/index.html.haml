@@ -1,0 +1,47 @@
+%div
+  %h2= "Welcome, #{@volunteer.name}, your total points are #{@volunteer.total_points}!"
+  %label= flash[:notice] unless flash[:notice].blank?
+  %div  
+    %table#current_tasks.table.table-striped
+      %h2 Your Current Tasks
+      %thead
+        %tr
+          %th ID
+          %th Type
+          %th Duration in Days
+          %th Progress
+          %th Goal
+          %th Points
+      %tbody
+        -@current_tasks.each do |task|
+          %tr
+            %td= task.id
+            %td= task.task_type
+            %td= task.duration
+            %td= task.progress
+            %td= task.goal.to_s + " " +  task.units.to_s
+            %td= task.points
+            %td= link_to "Show", volunteer_task_path(task.volunteer_id,task), :id => "show_" + task.task_ID.to_s
+            %td= link_to "Quit", volunteer_task_path(task.volunteer_id,task), :id => "quit_" + task.task_ID.to_s, method: :delete
+            
+            
+  %div
+    %table#suggested_tasks.table.table-striped
+      %h2 Add a task
+      %thead
+        %tr
+          %th ID
+          %th Type
+          %th Duration in Days
+          %th Goal
+          %th Points
+      %tbody
+        -@suggested_tasks.each do |task|
+          %tr
+            %td= task.id
+            %td= task.task_type
+            %td= task.duration
+            %td= task.goal.to_s + " " + task.units.to_s
+            %td= task.points
+            %td= link_to "Accept", volunteer_tasks_path(@volunteer_id, task_id: task[:id], task_type: task[:task_type]), :id => "accept_" + task.task_ID.to_s, method: :post
+

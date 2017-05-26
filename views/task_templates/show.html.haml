@@ -1,0 +1,20 @@
+%h2 Details about #{@task_template.task_type}
+
+%ul#details
+  %li
+    Type:
+    = @task_template.type
+  %li
+    Duration:
+    = @task_template.duration
+  %li
+    Goal:
+    = @task_template.goal
+  %li
+    Points:
+    = @task_template.points
+
+
+//= link_to 'Edit', edit_movie_path(@movie)
+//= button_to 'Delete', movie_path(@movie), :method => :delete, :confirm => 'Are you sure?'
+//= link_to 'Back to movie list', movies_path

@@ -1,0 +1,7 @@
+Casey:
+I set up the twitter authentication system with the sessions_controller and the omniauth gem, implementing the omniauth routing for routes.rb and the new create method for the Volunteer model allowing volunteers to be created using twitter for authentication.
+I wrote the volunteer_controller which routes create requests to the ominauth creator, directs users to either the new user page or their tasks page based on login state, and has a quickLogin method that essentially stubs out twitter login for cucumber/capybara which does not work well with external services.
+I wrote the cucumber/capybara tests for user creation.
+I wrote the rspec tests in volunteer_controller_spec.rb
+I helped set up some of the database migrations as well as making the basic inheritance of the models using activerecord has_many and belongs_to.
+I helped to deploy the application to Heroku, we had to modify a couple of model fields to bigint due to the differences in size of integer between sqlite3 and postgres
