@@ -33,6 +33,7 @@ end
 
   #gem 'therubyracer', '~> 0.12.0'
 gem 'sass-rails', '~> 5.0.3'
+gem "bootstrap-sass", "2.3.1.0"
 gem 'coffee-rails', '~> 4.1.0'
 gem 'uglifier', '>= 2.7.1'
 
@@ -41,7 +42,6 @@ gem 'haml'
 gem 'protected_attributes'
 
 
-gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 gem 'less-rails'
 gem 'therubyracer'
