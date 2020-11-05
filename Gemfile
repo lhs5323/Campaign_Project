@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.3.0'
+ruby '2.6.3'
 gem 'rails', '4.2.6'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -33,7 +33,6 @@ end
 
   #gem 'therubyracer', '~> 0.12.0'
 gem 'sass-rails', '~> 5.0.3'
-gem "bootstrap-sass", "2.3.1.0"
 gem 'coffee-rails', '~> 4.1.0'
 gem 'uglifier', '>= 2.7.1'
 
@@ -42,6 +41,7 @@ gem 'haml'
 gem 'protected_attributes'
 
 
+gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 gem 'less-rails'
 gem 'therubyracer'
